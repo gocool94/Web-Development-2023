@@ -202,10 +202,11 @@ Coding Challenge #3
 There are two gymnastics teams, Dolphins and Koalas. They compete against each
 other 3 times. The winner with the highest average score wins a trophy!
 Your tasks:
-1. Calculate the average score for each team, using the test data below
+1. Calculate the average score for each team, using the test data below [Done]
 2. Compare the team's average scores to determine the winner of the competition,
 and print it to the console. Don't forget that there can be a draw, so test for that
-as well (draw means they have the same average score)
+as well (draw means they have the same average score)[done]
+
 3. Bonus 1: Include a requirement for a minimum score of 100. With this rule, a
 team only wins if it has a higher score than the other team, and the same time a
 score of at least 100 points. Hint: Use a logical operator to test for minimum
@@ -219,3 +220,59 @@ Test data:
 § Data Bonus 2: Dolphins score 97, 112 and 101. Koalas score 109, 95 and 106
 
 */
+
+let Dolphins;
+let Koalas;
+
+Dolphins = (96 + 108 + 89) / 3;
+Koalas = (88 + 91 + 110) / 3;
+
+if (Dolphins == Koalas && Dolphins >= 100 && Koalas >= 100) {
+  console.log("Both are winners");
+} else if (Dolphins > Koalas && Dolphins > 100) {
+  console.log("Dophins wins");
+} else if (Dolphins < Koalas && Koalas > 100) {
+  console.log("Koalas wins");
+}
+
+// switch statement
+
+const day = 1;
+
+switch (day) {
+  case 1:
+    console.log("Monday");
+    break;
+  case 2:
+    console.log("Tuesday");
+    break;
+  case 3:
+    console.log("Wednesday");
+    break;
+
+  default:
+    console.log("Default value is called");
+    break;
+}
+
+const age_value = 18;
+
+age_value === 18
+  ? console.log("you can drink wine")
+  : console.log("Water is enough");
+
+let vote = age_value >= 18 ? "win" : "loose";
+console.log(vote);
+
+//Challenge 5
+
+var bill_value = prompt("Enter the bill value \n");
+let tip;
+
+tip = bill_value <= 50 && bill_value >= 300 ? 15 : 20;
+tip = tip * (tip / 100);
+let final_bill = tip + bill_value;
+
+console.log(`“The bill was ${bill_value}, the tip was ${tip}, and the total value
+${final_bill}”
+`);
